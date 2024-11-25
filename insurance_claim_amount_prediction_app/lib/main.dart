@@ -1,5 +1,3 @@
-// lib/main.dart
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -123,7 +121,7 @@ class _PredictionPageState extends State<PredictionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sekofia Claims Predictor'),
+        title: const Text('Insurance Claims Amount Predictor'),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),

@@ -5,16 +5,16 @@ import joblib
 import pandas as pd
 import numpy as np
 
-# Create FastAPI instance with OpenAPI details
+# Creating FastAPI instance with OpenAPI details
 app = FastAPI(
-    title="Sekofia Insurance Claims Predictor",
+    title="Sekofia Insurance Claims Amount Predictor",
     description="API for predicting insurance claim amounts",
     version="1.0.0",
-    docs_url="/docs",   # Explicitly set the docs URL
-    redoc_url="/redoc"  # Explicitly set the redoc URL
+    docs_url="/docs",   
+    redoc_url="/redoc"  
 )
 
-# Add CORS middleware
+# Adding CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,7 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Define input data validation model
+# Defining input data validation model
 class InsuranceClaim(BaseModel):
     PatientAge: int = Field(..., ge=0, le=120, description="Patient age (0-120 years)")
     PatientIncome: float = Field(..., ge=0, description="Annual income (>= 0)")
@@ -56,7 +56,7 @@ class InsuranceClaim(BaseModel):
             }
         }
 
-# Load the model
+# Loading the model
 model = joblib.load('best_insurance_claim_model.joblib')
 
 @app.post("/predict", response_model=dict)
