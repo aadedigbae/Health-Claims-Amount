@@ -106,7 +106,7 @@ Tap the "Predict" button
 View the predicted claim amount
 
 <h1>Demo Video</h1>
-Watch the demonstration of the project here: YouTube Demo Link
+<a href="https://www.youtube.com/watch?v=LVhhXCQ1bqc">Watch the demonstration of the project here: YouTube Demo Link</a>
 
 <h1>Technologies Used</h1>
 Python (Scikit-learn, Pandas, NumPy)
